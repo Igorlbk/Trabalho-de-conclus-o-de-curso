@@ -1,16 +1,15 @@
-const express = require('express')
+import express from 'express';
+const app = express();
 
-//app
-const app = express
 app.use(express.json());
 
-app.listen(8080, () => {
+app.get("/", async (req, res) => {
+    res.send(__dirname + "/paginas/index.html");
+});
+
+app.listen(8081, () => {
     console.log("servidor rodando")
 })
-
-app.get("/", async (req, res) => {
-    res.sendfile(__dirname + "/paginas/index.html");
-});
 
 
 
