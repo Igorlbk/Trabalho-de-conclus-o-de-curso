@@ -4,4 +4,4 @@ const sequelize = new Sequelize("", "", "", {
     host: 'localhost',
     dialect: 'mysql'})
 
-    module.exports = sequelize;
+module.exports = sequelize;
