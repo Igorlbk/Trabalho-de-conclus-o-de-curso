@@ -8,6 +8,3 @@ app.use(routes);
 app.listen(8081, () => {
     console.log("servidor rodando")
 })
-
-
-
