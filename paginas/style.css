@@ -28,7 +28,9 @@ padding: 0.7em;
 
 }
 .formLogin{
-
+    margin: 0 auto;
+    border: blue 1px solid;
+    padding: 0.7em;
 }
 
 .animation{
@@ -36,3 +38,37 @@ padding: 0.7em;
     background-color: black;
     z-index: 1;
 }
+
+.email{
+    border: 0.3em orangered solid;
+    outline: none;
+    transition: all 0.3s;
+
+}
+.label{
+    transition: all 0.2s;
+    z-index: 1;
+    padding: 0.1em;
+    position: absolute;
+    
+
+}
+.label::before {
+content: "";
+position: absolute;
+z-index: -1;
+}
+.email:focus {
+    border: 0.2em solid orangered;
+}
+.email:focus + .label,.filled {
+    top: -0.3em;
+}
+.email::placeholder {
+opacity: 0;
+transition: all 0.3s;
+}
+.email:focus::placeholder {
+    opacity: 1;
+}
+
