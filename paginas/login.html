@@ -35,7 +35,7 @@
             <div class="formLogin">
                 <p>
                 
-                <input type="email" name="email" class="email" autocomplete="off" placeholder="Insira o seu email" required>
+                <input type="email" name="email" class="email" autocomplete="off" placeholder="Insira o seu email" required/>
                 <label class="label" for="email">E-mail:</label>
             </p>
             <p>
@@ -46,16 +46,25 @@
         </div>
         <div class="animation"></div>
     </div>
-    <script lang="javascript/text">
-        document.querySelectorAll(".email").forEach(Element)={
-            Element.addEventlistener("blur", (event))={
-                if(event.target.value != ""){
+    <!--  <script lang="javascript/text">
+        document.querySelectorAll(".email").forEach((Element)=> {
+        
+            Element.addEventlistener("blur", (event) =>
+            {
+                if(event.target.value != "")
+                {
+                
                     event.target.nextElementSibling.classList.add("filled");
                 }
+                else
+                {
+                
+                    event.target.nextElementSibling.classList.remove("filled");
+                }
 
-            }
+            });
 
-        }
-    </script>
+        });
+    </script>-->
 </body>
 </html>

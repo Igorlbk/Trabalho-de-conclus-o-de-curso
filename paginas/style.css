@@ -31,6 +31,7 @@ padding: 0.7em;
     margin: 0 auto;
     border: blue 1px solid;
     padding: 0.7em;
+    
 }
 
 .animation{
@@ -39,10 +40,12 @@ padding: 0.7em;
     z-index: 1;
 }
 
-.email{
+/*.email{
     border: 0.3em orangered solid;
     outline: none;
     transition: all 0.3s;
+    padding: 0.8rem;
+    display: flex;
 
 }
 .label{
@@ -61,7 +64,7 @@ z-index: -1;
 .email:focus {
     border: 0.2em solid orangered;
 }
-.email:focus + .label,.filled {
+.email:focus + .label{
     top: -0.3em;
 }
 .email::placeholder {
@@ -70,5 +73,6 @@ transition: all 0.3s;
 }
 .email:focus::placeholder {
     opacity: 1;
-}
+}*/
+
 
