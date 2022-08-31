@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
+const dbConfig = require('../database.js');
 
-const sequelize = new Sequelize("", "", "", {
-    host: 'localhost',
-    dialect: 'mssql'})
+const sequelize = new Sequelize(dbConfig);
+
 
 module.exports = sequelize;
