@@ -1,5 +1,5 @@
 module.exports={
-    dialect: 'mysql',
+    dialect: 'mysq',
     host: 'localhost',
     username: 'sa',
     password: 'Admin2018@',
