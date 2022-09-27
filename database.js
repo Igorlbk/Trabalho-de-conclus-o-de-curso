@@ -1,5 +1,5 @@
 module.exports={
-    dialect: 'ssql',
+    dialect: '',
     host: 'localhost',
     username: 'sa',
     password: 'Admin2018@',
