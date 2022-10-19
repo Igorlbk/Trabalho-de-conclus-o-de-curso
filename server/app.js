@@ -1,15 +1,36 @@
 import express from 'express';
 import cors from "cors";
+import { testConnect } from "./TestConnect.js";
 import { routes } from './routes.js';
-const app = express();
 
 const port = process.env.PORT = 4000
+const app = express()
+
+app.use(cors())
 
 
 
-app.use(express.json());
+app.use(express.json())
+app.use(express.urlencoded({
+    extended: true
+}),
+)
+
+app.use(routes)
+
+testConnect().then((res) => {
+    if(res == true){
+        app.listen(port, ()=>{
+            console.log('Server Running on Port ' + port)
+        })
+    }
+})
+
+
+
+
 //app.use(routes);
 
-app.listen(8081, () => {
-    console.log("servidor rodando")
-})
+//app.listen(8081, () => {
+    //console.log("servidor rodando")
+//})
