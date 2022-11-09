@@ -3,7 +3,7 @@ import cors from "cors";
 import { testConnect } from "./TestConnect.js";
 import { routes } from './routes.js';
 
-const port = process.env.PORT = 4000
+const port = process.env.PORT = 3000
 const app = express()
 
 app.use(cors())
@@ -26,11 +26,3 @@ testConnect().then((res) => {
     }
 })
 
-
-
-
-//app.use(routes);
-
-//app.listen(8081, () => {
-    //console.log("servidor rodando")
-//})

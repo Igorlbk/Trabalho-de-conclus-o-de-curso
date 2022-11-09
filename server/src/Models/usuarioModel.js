@@ -29,12 +29,6 @@ export class usuario{
             this.img_perfil = img_perfil
         }
 
-       // if(nivelUser == '' || nivelUser == null || nivelUser == undefined){
-       //     this.nivelUser = 1
-      //  }else{
-      //      this.nivelUser = 1
-      //  }
-
         if(status == '' || status == null || status == undefined){
             this.status = 1
         }else{
@@ -52,3 +46,4 @@ export class usuario{
         }else{
             this.data_update = data_update
         }
+    }}
