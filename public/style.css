@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+#logo{
+    width: 60px; height: auto;
+}
+#header{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    padding: 1rem;
+    justify-content: space-between;
+    background: rgb(14, 14, 14);
+}
+#menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: .5rem
+}
+#menu a {
+    display: block;
+    margin: .5rem;
+    padding: .5rem;
+    color: #a7a6a6;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+}
+#menu a:hover{
+    background: #3c3c3c;
+    color: #F26202;
+}
+#btn-mobile{
+    display: none;
+}
+#modal-login{
+    display: flex;
+    align-items: center;
+}
+#container_usuario{
+    display: flex;
+    align-items: center;
+}
+#user_img{
+    background: #fff;
+    display: block;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: .5rem;
+}
+@media (max-width:600px) {
+    #btn-mobile{
+        display: block;
+    }
+    #menu{
+        display: block;
+        position: absolute;
+        width: 100%; height: 0px;
+        transition: .6s;
+        top: 66px; right: 0px;
+        background: rgb(14, 14, 14);
+        z-index: 1;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #nav.active #menu {
+        height: calc(50vh - 66px);
+        visibility: visible;
+    }
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0,0,0, .05);
+    }
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    #hamburguer{
+        color: #eeeeee;
+        border-top: 2px solid;
+        width: 20px;
+    }
+    #hamburguer::after, #hamburguer::before{
+        content: "";
+        display: block;
+        border-top: 2px solid;
+        width: 20px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+    #nav.active #hamburguer{
+        border-top-color: transparent;
+    }
+    #nav.active #hamburguer::before {
+        transform:rotate(135deg);
+    }
+    #nav.active #hamburguer::after {
+        transform:rotate(-135deg);
+        top: -7px
+    }
+}
+#header_modal{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ff8018;
+}
+#header_modal button{
+    border: none;
+    transition: 0.5s;
+    background: none;
+    scale: 1.5;
+    color: #eeeeee;
+}
+#header_modal button:hover, button:focus{
+    cursor: pointer;
+    transform:scale(1.2);
+    color: red;
+}
+form{
+    padding: 0.5rem;
+}
+.label-float{
+    position: relative;
+    padding: 1rem 0 1rem 0;
+}  
+.label-float input{
+  border: 0;
+  border-bottom: 2px solid lightgrey;
+  background: none;
+  outline: none;
+  min-width: 75%;
+  font-size: 16px;
+  transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  border-radius: 0;
+  } 
+.label-float input:focus{
+  border-bottom: 2px solid #ff8018;
+}  
+.label-float input::placeholder{
+  color:transparent;
+}  
+.label-float label{
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+}  
+.label-float input:required:invalid + label{
+  color: red;
+}
+.label-float input:focus:required:invalid{
+  border-bottom: 2px solid red;
+}
+.label-float input:required:invalid + label:before{
+  content: '*';
+}
+.label-float input:focus + label,
+.label-float input:not(:placeholder-shown) + label{
+  font-size: 13px;
+  margin-top: 0;
+  color: #ff8018;
+}
+#btnLogin{
+margin-top: 1rem;
+  padding: 0.7rem;
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+  border-radius: 15px;
+  border: 1px solid #e7e7e7;
+  background: rgb(255,179,118);
+  background: linear-gradient(42deg, rgba(255,179,118,1) 1%, rgba(255,128,24,1) 100%);
+  transition: 0.5s;
+}
+#btnLogin:hover{
+  scale: 1.05;
+  border: 1px solid #262626;
+}
+#fade, #modal{
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+#fade{
+    width: 100%;height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 2;
+}
+#modal{
+    width: 500px;
+    max-width: 90%;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+
+    background: #3c3c3c;
+    color:#eeeeee;
+    border: 2px solid #e7e7e7;
+    border-radius: 10px;
+
+    padding: 1rem;
+}
+#fade.hide, #modal.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+#modal.hide{
+    top: 0;
+}
+#footer_modal{
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+#footer_modal p{
+    font-size: 0.75rem;
+}
+#footer_modal a{
+    text-decoration: underline;
+    cursor: pointer;
+    color: #ff8018;
+    transition: 0.5s;
+}
+#footer_modal a:hover{
+    color: #c75000;
+}
+main{
+    height: 90vh;
+    display: flex;
+}
+#lateral_conversas{
+  background: #202020;
+  width: 30vw;
+  padding: .5rem;
+}
+#container_pesquisa{
+  width: 100%;
+  position: relative;
+  padding-bottom: 1rem;
+  border-bottom: #ff8018 1px solid;
+}
+#lblBusca, #lblMensagem {
+  display:none;
+}
+#busca {
+  width: 100%;
+}
+#busca:focus{
+    outline: none;
+}
+#busca{
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+}
+#botao_pesquisa{
+  padding: 4px;
+  position: absolute;   
+  top: 5; 
+  right: 0;
+  transform: translate(-16px,3px);
+  cursor: pointer;
+  text-decoration: none;
+
+  background: none;
+  border: none;
+}
+#icon_botao_pesquisa{
+    scale: 0.9;
+    width: auto; height: auto;
+}
+#chat{
+    width: 70vw;
+    background: #3c3c3c;
+}

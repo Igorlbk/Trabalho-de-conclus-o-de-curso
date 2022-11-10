@@ -1,0 +1,100 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: #262626;
+}
+header{
+    height: 10vh;
+    background: black;
+}
+main{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    background: #363636;
+}
+footer{
+  height: 10vh;
+  background: black;
+}
+#container_cadastro{
+  width: 500px;
+  max-width: 90%;
+  margin: 0 auto;
+  background: #e7e7e7;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+#header_cadastro{
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom:#ff8018 solid 1px;
+}
+form{
+  padding: 1rem;
+}
+.label-float{
+    position: relative;
+    padding: 1rem 0 1rem 0;
+}  
+.label-float input{
+  border: 0;
+  border-bottom: 2px solid lightgrey;
+  background: none;
+  outline: none;
+  min-width: 75%;
+  font-size: 16px;
+  transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  border-radius: 0;
+  } 
+.label-float input:focus{
+  border-bottom: 2px solid #ff8018;
+}  
+.label-float input::placeholder{
+  color:transparent;
+}  
+.label-float label{
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+}  
+.label-float input:required:invalid + label{
+  color: red;
+}
+.label-float input:focus:required:invalid{
+  border-bottom: 2px solid red;
+}
+.label-float input:required:invalid + label:before{
+  content: '*';
+}
+.label-float input:focus + label,
+.label-float input:not(:placeholder-shown) + label{
+  font-size: 13px;
+  margin-top: 0;
+  color: #ff8018;
+}
+#btnSubmit{
+  margin-top: 1rem;
+  padding: 0.7rem;
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+  border-radius: 15px;
+  border: 1px solid #e7e7e7;
+  background: rgb(255,179,118);
+  background: linear-gradient(42deg, rgba(255,179,118,1) 1%, rgba(255,128,24,1) 100%);
+  transition: 0.5s;
+}
+#btnSubmit:hover{
+  scale: 1.05;
+  border: 1px solid #262626;
+}
