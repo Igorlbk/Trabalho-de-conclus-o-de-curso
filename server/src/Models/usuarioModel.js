@@ -47,3 +47,5 @@ export class usuario{
             this.data_update = data_update
         }
     }}
+
+   
