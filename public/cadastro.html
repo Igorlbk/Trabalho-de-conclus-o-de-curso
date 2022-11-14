@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pannet - Cadastre sua conta</title>
     <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <header>
-
+        <nav>
+            <ul>
+                <li><a href="index.html"><span class="material-symbols-outlined">arrow_back</span></a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <div id="container_cadastro">
@@ -18,18 +23,24 @@
             </div>
             <form action="">
                 <div class="label-float">
-                    <input type="text" name="nickname" placeholder="Insira seu nickname">
+                    <input type="text" name="nickname" placeholder="Nickname">
                     <label for="nickname">Nickname</label>
                 </div>
                 <div class="label-float">
-                    <input type="Email" name="Email" placeholder="Insira seu email">
+                    <input type="Email" name="Email" placeholder="Email">
                     <label for="Email">Email</label>
                 </div>
                 <div class="label-float">
-                    <input type="password" name="Senha" placeholder="Insira sua senha">
+                    <input type="password" name="Senha" placeholder="Senha">
                     <label for="Senha">Senha</label>
                 </div>
-                <input type="submit" value="Cadastrar" id="btnSubmit">
+                <div id="footer_container">
+                    <div id="termos_subcontainer">
+                        <input type="checkbox" name="termos_de_uso" id="ckbTermosUso">
+                        <label for="termos_de_uso">Ao realizar o cadastro você concorda com os <a>Termos de Uso</a></label>
+                    </div>
+                    <input type="submit" value="Cadastrar" id="btnSubmit">
+                </div>
             </form>
         </div>
     </main>
