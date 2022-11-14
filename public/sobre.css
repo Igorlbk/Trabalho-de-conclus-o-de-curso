@@ -1,0 +1,11 @@
+*{
+    padding: 0 auto;
+    margin: 0 auto;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+header{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
